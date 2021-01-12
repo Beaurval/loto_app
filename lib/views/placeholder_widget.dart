@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:loto_app/helpers/LotoResult.dart';
 
 class AccueilTab extends StatelessWidget {
   AccueilTab();
 
   final colors = [Colors.red, Colors.blue, Colors.brown, Colors.cyan];
+  LotoResult lotoResult = new LotoResult();
 
   @override
   Widget build(BuildContext context) {
@@ -22,82 +24,7 @@ class AccueilTab extends StatelessWidget {
                 fontSize: 15
               ),
             ),
-            Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    child: CircleAvatar(
-                      radius: 20,
-                      child:
-                      Text(
-                        "1",
-                        textScaleFactor: 1,
-                      ),
-                    ),
-                    margin: EdgeInsets.all(5.0),
-                  ),
-                  Container(
-                    child: CircleAvatar(
-                      radius: 20,
-                      child:
-                      Text(
-                        "1",
-                        textScaleFactor: 1,
-                      ),
-                    ),
-                    margin: EdgeInsets.all(5.0),
-                  ),
-                  Container(
-                    child: CircleAvatar(
-                      radius: 20,
-                      child:
-                      Text(
-                        "1",
-                        textScaleFactor: 1,
-                      ),
-                    ),
-                    margin: EdgeInsets.all(5.0),
-                  ),
-                  Container(
-                    child: CircleAvatar(
-                      radius: 20,
-                      child:
-                      Text(
-                        "1",
-                        textScaleFactor: 1,
-                      ),
-                    ),
-                    margin: EdgeInsets.all(5.0),
-                  ),
-                  Container(
-                    child: CircleAvatar(
-                      radius: 20,
-                      child:
-                      Text(
-                        "1",
-                        textScaleFactor: 1,
-                      ),
-                    ),
-                    margin: EdgeInsets.all(5.0),
-                  ),
-                  Container(
-                    child: CircleAvatar(
-                      backgroundColor: Colors.red,
-                      radius: 20,
-                      child:
-                      Text(
-                        "1",
-                        textScaleFactor: 1,
-                        style: TextStyle(
-                            color: Colors.white
-                        ),
-                      ),
-                    ),
-                    margin: EdgeInsets.all(5.0),
-                  ),
-                ],
-            ),
-
+            lotoResult.getWidgetWithNumbers([1,2,3,4,5,6])
           ],
         )
       ),
